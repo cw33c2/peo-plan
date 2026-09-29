@@ -1,12 +1,12 @@
-# 🛎️ peo-plan — 全域技能調度官
+# 🛎️ peo-plan — 全域技能調度官 (軍團完全體)
 
-> 這是整個 AI 廚房的**中央傳令樞紐**。所有已安裝的技能都必須向她「登記入職」。當任何任務進來時，由 peo-plan 自動調度，確保老闆心血打造的每一個 Skill 都被正確使用。
+> 這是整個 AI 廚房的**中央傳令樞紐**。已完整登記入冊 **53+ 神兵利器與特種兵工具**（包含 `/goal`, `/boost`, HDB 工具包, Simonw 套件, 工程防線 SOP）。當任何任務進來時，由 peo-plan 自動串連調度，確保老闆心血打造的每一個 Skill 都被正確使用。
 
 ## 📁 倉庫結構
 
 ```
 peo-plan/
-├── SKILL.md                     ← 主技能文件（大腦）
+├── SKILL.md                     ← 主技能文件（53+ 特種兵電話簿）
 ├── README.md                    ← 本說明文件
 └── registry/                    ← 技能登記所
     ├── _HOW_TO_REGISTER.md      ← 新技能入職指南
@@ -18,20 +18,15 @@ peo-plan/
     └── speech.md                ← 語音：Asa & Wer 語音生成
 ```
 
-## 🚀 如何使用
+## 🚀 53+ 特種兵調度大腦
 
-對 AI 說：
-> `peo-plan，我需要 [描述任務]，請幫我找到對的技能並傳達。`
-
-## 🆕 如何登記新技能
-
-當你完成一個新的 Skill：
-> `peo-plan，我做了一個新技能叫 [name]，它能做 [功能描述]，安裝在 [路徑]。`
-
-peo-plan 會自動在 `registry/` 建立入職卡。
+包含 6 大專業陣營：
+1. ⚡ **老闆核心神技** (`/goal`, `/boost`, `/schedule`, `/browser`, `/learn`)
+2. 🛡️ **工程防線與品質品管** (`/setup-pre-commit`, `ts-reset`, `hdb-detect-debt`, `hdb-split-pr`)
+3. 📋 **需求對齊與架構設計** (`/grill-me`, `/to-prd`, `/to-spec`, `/wait-what`, `make-adr`)
+4. 💻 **多語言實作與開發助手** (`a-plan`, `ui-ux-plan`, `hdb-go-dev`, `hdb-python-dev`, `hdb-rust-dev`)
+5. 🔬 **情報搜集、資料庫與文件專家** (`simonw-skill-creator`, `datasette`, `shot-scraper`, `simonw-pdf`)
+6. 🎨 **視覺、語音與多媒體庫** (`fal-ai-mcp-server`, `speech`, `recipe`, `html-ppt-plan`, `soil-deck`)
 
 ## 🔗 相關倉庫
-
-- 主廚技能：[ui-ux-plan-skill](https://github.com/cw33c2/ui-ux-plan-skill)
-- 傳家食譜：[antigravity-skills-backup](https://github.com/cw33c2/antigravity-skills-backup) (含 `/recipe`)
-- 頂級菜商：[ui-ux-pro-max-skill](https://github.com/cw33c2/ui-ux-pro-max-skill)
+- GitHub 倉庫：[cw33c2/peo-plan](https://github.com/cw33c2/peo-plan)

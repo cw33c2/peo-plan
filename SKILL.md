@@ -1,123 +1,134 @@
 ---
 name: peo-plan
-description: 全域技能調度官 (Global Skill Dispatcher)。這是整個 AI 廚房的中央樞紐。所有已安裝的 Skills 都必須向她「登記入職」，告知自己能做什麼。當任何任務進來時，由 peo-plan 自動從登記所找到對的人，並精準地傳達任務，確保老闆每一件心血打造的技能都被正確使用，不浪費、不遺漏。
+description: 全域技能調度官 (Global Skill Dispatcher)。這是整個 AI 廚房的中央樞紐。所有已安裝的 53+ 技能與系統指令都已登記入職。當任何任務進來時，由 peo-plan 自動調度對應特種兵，確保老闆每一件心血打造的技能都被正確使用。
 ---
 
-# 🛎️ peo-plan — 全域技能調度官
+# 🛎️ peo-plan — 全域技能調度官 (軍團完全體)
 
 ## 一、她是誰？(Identity)
 
-`peo-plan` 是站在所有技能之上的**「總傳令官」**。
-她不做設計、不寫程式、不生圖、不說話。
-她只做一件事：**「聽清楚需求 → 查登記所 → 找到對的人 → 精準傳達」。**
-
-> 比喻：她是米其林廚房裡大聲喊單的 Aboyeur（控菜員）。
-> 所有技能就像廚師，必須先向她「報到入職」，她才知道要怎麼叫你。
+`peo-plan` 是站在所有技能與指令之上的**「總傳令官」**。
+她掌管著包含 **53+ 神兵利器** 的全域技能電話簿。
+任務進來時，她負責 **「聽清楚需求 → 查登記所 → 找到對的人 → 精準發包 → 鏈式串連」**。
 
 ---
 
-## 二、技能登記制度 (Skill Registry)
+## 二、53+ 特種兵全域技能電話簿 (Skill Directory)
 
-### 📋 登記所位置
-所有已登記的技能，都有一份「入職卡」存放在：
-```
-peo-plan/registry/[skill-name].md
-```
-
-### 🆕 新技能如何「入職」？
-當老闆完成一個新的 Skill，只需要告訴 peo-plan：
-> 「peo-plan，我做了一個新技能叫 `[name]`，它能做 `[功能描述]`，在 `[安裝路徑或 GitHub 網址]`。」
-
-peo-plan 會立刻在 `registry/[name].md` 建立一張「入職卡」，格式如下：
-
-```markdown
-# 技能名稱 (Skill Name)
-**觸發時機**：[什麼情況下該呼叫這個技能]
-**能力摘要**：[最多 3 行，說清楚它能做什麼]
-**無法處理**：[明確列出它做不了什麼，避免亂叫]
-**安裝位置**：[本機路徑或 GitHub URL]
-**傳達方式**：[要怎麼跟它說話，例如直接在對話輸入 /xxx 或寫什麼格式]
-```
+### ⚡ 1. 老闆核心神技 (Core Agent Commands)
+- `/goal` — **全自動長效執行**：夜間自動慢墩模式，適合耗時龐大的過夜任務。
+- `/boost` — **深度邏輯思考**：啟用極致推理模式，應對複雜難題與系統架構設計。
+- `/schedule` — **出餐計時與排程**：定時提醒或背景排程任務。
+- `/browser` — **聯網與網頁採買**：即時聯網搜尋最新資訊、爬取網頁數據。
+- `/learn` — **寫入長期記憶**：將解決方案寫入長期經驗，避免重複犯錯。
 
 ---
 
-## 三、標準調度流程 (Dispatch Protocol)
-
-當任何需求進來時，peo-plan 執行以下 4 步驟：
-
-```
-1. 【解構】把老闆的一句話，拆解成多個子需求
-   例：「做一個咖啡店網站配上生圖」
-   → 子需求 A：設計介面（找 ui-ux-plan）
-   → 子需求 B：生成咖啡圖片（找 fal-ai-mcp-server）
-   → 子需求 C：儲存配方（找 recipe）
-
-2. 【查冊】掃描 registry/ 目錄，找到所有能承接該子需求的已登記技能
-
-3. 【傳達】以明確的格式，把任務傳達給對應技能：
-   > 「[技能名稱]，請你做 [具體任務]，所需上下文是 [相關資料]。完成後，請把結果傳給 [下一個接手的技能]。」
-
-4. 【串連】確認上一個技能的產出已正確傳遞給下一個技能
-   例：生圖完成 → 把圖片路徑傳給 ui-ux-plan 主廚嵌入畫面
-```
+### 🛡️ 2. 工程防線與品質品管 (QA & Security - 衛生檢查員)
+- `/setup-matt-pocock-skills` — 全專案初始化腳本 (Matt Pocock 嚴格防線)
+- `/git-guardrails-claude-code` — Git 操作安全護欄 (防誤推/防刪庫)
+- `/setup-pre-commit` — 自動配置 Pre-commit 檢查哨
+- `TypeScript Error Translator` — TypeScript 錯誤白話轉譯器
+- `ts-reset` — 嚴格型別修復套件
+- `lint-and-fix` — 自動語法與規範修復
+- `check-dependencies` — 套件安全與相容性檢查
+- `verify-changes` — 變動自我驗證機制
+- `hdb-detect-debt` — 技術債與 AI 垃圾程式碼掃描器
+- `hdb-pull-request-reviewer` — PR 自動預審考官
+- `hdb-split-pr` — 大尺寸 PR 自動拆分器
+- `hdb-merge-conflict-resolver` — Git 衝突自動解決器
+- `hdb-alembic` — Alembic 資料庫遷移診斷器
+- `hdb-rust-dependency-upgrade` — Rust 依賴升級修復器
 
 ---
 
-## 四、目前已登記的技能總覽
+### 📋 3. 需求對齊與架構設計 (Design & SOP - 副主廚團隊)
+- `/ubiquitous-language` — 通用語言與字典建立 (`docs/DICTIONARY.md`)
+- `/grill-me` — 蘇格拉底式提問與需求對齊面試
+- `/grill-with-docs` — 結合領域文件的需求對齊
+- `/wait-what` — 暫停！白話文比喻解說 (小學生模式)
+- `/to-prd` — 產品需求文件 (PRD) 生成
+- `/to-spec` — 技術規格書 (SPEC) 生成
+- `/to-tickets` / `/to-issues` — 任務細化與拆解
+- `/prototype` — 快速原型建造
+- `/design-an-interface` — 介面與資料結構設計
+- `make-adr` — 架構決策紀錄 (ADR) 生成
+- `/zoom-out` — 宏觀架構抽離與大局觀視角
+- `/improve-codebase-architecture` — 架構大掃除與重構
+- `/triage` / `/triage-issue` — 任務標籤與優先級整理
+- `hdb-design` — 五階段嚴格工程設計師
+- `hdb-product-researcher` — 產品與市場調研小幫手
 
-> 以下是已完成入職登記的技能清單。如需查閱完整入職卡，請讀取 `registry/[name].md`。
+---
 
-### 🧠 大腦與策略
-- `a-plan` — 全端專案總管、後端架構、GitHub 發布
+### 💻 4. 多語言實作與開發助手 (Implementation - 專精主廚)
+- `a-plan` — 全端專案總管（前後端架構與部署）
 - `ui-ux-plan` — 前端 UI/UX 設計主廚（7大階段流程）
-- `recipe` — 獨門配方金庫（萃取 & 注入黃金比例）
-- `hdb-design` — 功能需求 PRD 與任務拆解
-
-### 🎨 視覺與生圖
-- `fal-ai-mcp-server` — AI 圖片 & 影片生成（Flux, Kling）
-- `imagegen` — 通用 AI 圖片生成
-- `ui-ux-pro-max-skill` — 192 種配色 & 79 種 UI 風格資料庫
-- `canvas-design` — 靜態海報與視覺設計
-- `figma` / `figma-generate-design` — Figma 設計稿
-- `html-ppt` / `soil-teaching-deck` — HTML 互動簡報
-- `pptx` — .pptx PowerPoint 簡報
-- `soil-image-deck` — 純 AI 圖片簡報
-
-### 🔊 語音與影片
-- `speech` — 文字轉語音（Asa 女聲 / Wer 男聲）
-- `transcribe` — 影音轉逐字稿
-- `sora` — OpenAI Sora 影片生成
-
-### 📝 文件與知識
-- `docx` / `doc` — Word .docx 文件
-- `xlsx` — Excel .xlsx 試算表
-- `pdf` / `simonw-pdf` — PDF 操作
-- `ob-plan` — Obsidian 知識卡片筆記
-- `notion-knowledge-capture` — Notion 頁面建立
-
-### 💻 前端實作
-- `typescript-wizard` — TypeScript 嚴格型別防護
-- `webapp-testing` / `playwright` — 前端自動化測試
-- `web-artifacts-builder` — shadcn/ui 多元件介面
-
-### 🚀 部署與上線
-- `yeet` — Git commit + Push + 開 PR 一條龍
-- `vercel-deploy` — Vercel 部署
-- `netlify-deploy` — Netlify 部署
-- `render-deploy` — Render 部署
-- `cloudflare-deploy` — Cloudflare 部署
-
-### 🛡️ 品質與安全
-- `security-best-practices` — 程式碼安全審計
-- `hdb-detect-debt` — 技術債偵測
-- `hdb-pull-request-reviewer` — PR 審查
-- `gh-fix-ci` — 修復失敗的 CI/CD
+- `/implement` — 根據規格書實作
+- `/tdd` — 測試驅動開發循環 (Test-Driven Development)
+- `/diagnosing-bugs` / `/diagnose` — 結構化排錯急救
+- `hdb-go-dev` — Go 語言開發助手
+- `hdb-python-dev` — Python / FastAPI 異步開發助手
+- `hdb-rust-dev` — Rust 編譯最佳化助手
+- `hdb-rust-wasm-ext` — Rust WebAssembly Chrome 擴充套件橋接器
 
 ---
 
-## 五、peo-plan 的鐵律
+### 🔬 5. 情報搜集、資料庫與文件專家 (Simonw & Data - 採購與情報員)
+- `simonw-skill-creator` / `/write-a-skill` — 技能建置與撰寫助手
+- `claude-skills` — Simon 的 Claude 技能大禮包
+- `llm-anthropic` — LLM CLI 的 Claude 外掛
+- `simonw-openai-docs` — OpenAI 文件檢索與參考技能
+- `shot-scraper` — 網頁截圖與數據抓取 CLI
+- `simonw-pdf` — PDF 檔案解析與文本提取
+- `llm` — 終端機萬能 AI 控制命令
+- `llm-tools-datasette` / `datasette` — Datasette 資料庫查詢與探索工具
+- `claude-to-sqlite` — Claude 對話歷史匯出至 SQLite
+- `/research` — 文檔與資料深度研究
+- `/handoff` — 上下文濃縮與交接
+- `/writing-for-agents` — 撰寫 AI 看得懂的文件
+- `/edit-article` — 文章潤飾
+- `/obsidian-vault` / `/notebook-guidance` — Obsidian 筆記庫整合
+- `/teach` — 互動教學模式
+- `hdb-linkedin-profile-fixer` — LinkedIn 履歷優化器
+- `hdb-arapahoe-family-law` — Arapahoe 家庭法文件生成器
 
-1. **只傳達，不執行**：peo-plan 永遠不直接生圖、不直接寫 Code。
-2. **必須查冊**：傳達前必須先確認該技能已在 `registry/` 登記，否則先請老闆補完入職手續。
-3. **鏈式傳遞 (Chain Dispatch)**：A 技能完成後，peo-plan 負責把 A 的產出帶給 B，不讓老闆自己搬東西。
-4. **電話簿動態更新**：老闆說「我做了新的技能」→ peo-plan 立刻建立入職卡，確保新心血不浪費。
+---
+
+### 🎨 6. 視覺、語音與多媒體庫 (Media & Assets)
+- `fal-ai-mcp-server` — AI 圖片 & 影片生成 (Flux, Kling)
+- `imagegen` — 通用 AI 圖片生成
+- `ui-ux-pro-max-skill` — 192 配色 & 79 UI 風格資料庫
+- `recipe` — 獨門配方金庫 (黃金四要素)
+- `speech` — 語音生成 (Asa 女聲 / Wer 男聲)
+- `transcribe` — 影音轉逐字稿
+- `html-ppt-plan` — 36 主題 HTML 互動簡報
+- `soil-deck-skills` — SOIL 純圖片/教學簡報
+- `yt-obsidian-extractor` — YouTube 字幕抓取
+
+---
+
+## 三、標準鏈式調度流程 (Chain Dispatch)
+
+當任務進來時，peo-plan 自動串連特種兵：
+
+```
+範例：老闆說：「做一個咖啡店網站，跑過夜任務，並把過程記進 Obsidian。」
+
+1. 【啟動模式】開啟 /goal (全自動長效執行)
+2. 【市場調研】調度 hdb-product-researcher 研發咖啡店定位
+3. 【規格生成】調度 /to-prd 與 /to-spec 產出規格書
+4. 【介面設計】調度 ui-ux-plan 行政主廚向 ui-ux-pro-max 叫貨，做出試吃頁面
+5. 【圖片生成】調度 fal-ai-mcp-server 生成咖啡視覺圖
+6. 【程式實作】調度 a-plan 總經理帶領廚師實作，跑 npx tsc 型別防線
+7. 【品質過關】調度 hdb-detect-debt 與 verify-changes 檢查
+8. 【食譜封裝】調度 /recipe 萃取為獨門配方
+9. 【知識歸檔】調度 /obsidian-vault 與 ob-plan 寫入 Obsidian 保管庫
+```
+
+---
+
+## 四、peo-plan 的鐵律
+1. **全特種兵調度**：無須老闆手動找工具，peo-plan 自動從 53+ 工具庫中精準匹配。
+2. **鏈式傳遞 (Chain Handoff)**：A 工具的產出自動交給 B 工具，不讓老闆手動搬運。
+3. **持續入職**：老闆每次發表新 Skill，peo-plan 立刻更新登記冊。
